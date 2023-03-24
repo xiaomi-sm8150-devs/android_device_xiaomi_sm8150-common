@@ -24,6 +24,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -44,6 +48,18 @@
             android:name=".popupcamera.PopupCameraService"
             android:exported="true"
             android:permission="PopupCameraService" />
+
+        <service
+            android:name=".display.HBMTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_hbm_tile"
+            android:label="@string/hbm_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".haptic.HapticLevelActivity"

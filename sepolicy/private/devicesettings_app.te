@@ -35,3 +35,6 @@ allow devicesettings_app sysfs_vibrator:file rw_file_perms;
 hal_client_domain(devicesettings_app, hal_motor)
 binder_call(devicesettings_app, hal_motor)
 binder_call(hal_motor, devicesettings_app)
+
+# Allow XiaomiParts to talk to Lineage LiveDisplay HAL
+hal_client_domain(devicesettings_app, hal_lineage_livedisplay)

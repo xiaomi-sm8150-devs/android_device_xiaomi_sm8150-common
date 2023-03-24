@@ -128,6 +128,10 @@ on boot
     chown system system /sys/power/screen_off_flag
     chmod 0660 /sys/power/screen_off_flag
 
+    # HBM
+    chown system graphics /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
+    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
+
     # This location is used by QCRIL to host UNIX domain
     # socket files used for internal IPC within QCRIL
     # modules
