@@ -202,7 +202,6 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
-
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
 
@@ -211,6 +210,20 @@ on boot
 
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
+
+    # Sensors
+    chown system system /sys/devices/platform/goodix_ts.0/udfps_pressed
+    chmod 0660 /sys/devices/platform/goodix_ts.0/udfps_pressed
+    chown system system /sys/devices/platform/goodix_ts.0/udfps_enabled
+    chmod 0660 /sys/devices/platform/goodix_ts.0/udfps_enabled
+    chown system system /sys/devices/platform/goodix_ts.0/double_tap_pressed
+    chmod 0660 /sys/devices/platform/goodix_ts.0/double_tap_pressed
+    chown system system /sys/devices/platform/goodix_ts.0/double_tap_enabled
+    chmod 0660 /sys/devices/platform/goodix_ts.0/double_tap_enabled
+    chown system system /sys/devices/platform/goodix_ts.0/single_tap_pressed
+    chmod 0660 /sys/devices/platform/goodix_ts.0/single_tap_pressed
+    chown system system /sys/devices/platform/goodix_ts.0/single_tap_enabled
+    chmod 0660 /sys/devices/platform/goodix_ts.0/single_tap_enabled
 
 # msm specific files that need to be created on /data
 on post-fs-data

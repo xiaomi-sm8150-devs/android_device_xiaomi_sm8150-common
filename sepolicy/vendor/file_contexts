@@ -64,6 +64,12 @@
 
 # Sensors
 /dev/akm09970                                                                                       u:object_r:hall_device:s0
+/sys/devices/platform/goodix_ts.0/udfps_pressed                                                     u:object_r:vendor_sysfs_sensors:s0
+/sys/devices/platform/goodix_ts.0/udfps_enabled                                                     u:object_r:vendor_sysfs_sensors:s0
+/sys/devices/platform/goodix_ts.0/single_tap_pressed                                                u:object_r:vendor_sysfs_sensors:s0
+/sys/devices/platform/goodix_ts.0/single_tap_enabled                                                u:object_r:vendor_sysfs_sensors:s0
+/sys/devices/platform/goodix_ts.0/double_tap_pressed                                                u:object_r:vendor_sysfs_sensors:s0
+/sys/devices/platform/goodix_ts.0/double_tap_enabled                                                u:object_r:vendor_sysfs_sensors:s0
 
 # Sensors - data
 /data/vendor/sensor_log(/.*)?                                                                       u:object_r:vendor_sensor_log_data_file:s0
