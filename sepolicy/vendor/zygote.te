@@ -1,2 +1,4 @@
+allow zygote self:capability kill;
+
 # Allow zygote to set sys_nice capability
 allow zygote self:capability sys_nice;
