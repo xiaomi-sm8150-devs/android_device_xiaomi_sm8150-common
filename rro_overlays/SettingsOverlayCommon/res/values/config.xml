@@ -33,4 +33,8 @@
          should be either LOW (1) or HIGH (3).
     -->
     <integer name="config_vibration_supported_intensity_levels">3</integer>
+
+    <!-- Blur radius -->
+    <integer name="max_depth_blur_radius">11</integer>
+    <dimen name="max_depth_blur_radius_enhanced">15dp</dimen>
 </resources>
