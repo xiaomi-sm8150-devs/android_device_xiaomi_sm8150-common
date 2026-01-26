@@ -9,4 +9,4 @@ ro.config.notification_vol_steps=15
 ro.config.alarm_vol_steps=15
 
 # eBPF
-ro.bpf.kver_override=5.4.299
+ro.bpf.kver_override=5.10.239
