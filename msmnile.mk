@@ -246,6 +246,10 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.xiaomi_sm8150
+
 # Media configs
 PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
