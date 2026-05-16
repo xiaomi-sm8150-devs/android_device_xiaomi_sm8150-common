@@ -1,3 +1,6 @@
+# CSC DC Dimming
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dc_dim                            u:object_r:vendor_sysfs_graphics:s0
+
 # DSP
 genfscon sysfs /kernel/boot_cdsp/boot                                                               u:object_r:sysfs_msm_boot:s0
 
