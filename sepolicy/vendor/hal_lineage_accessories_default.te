@@ -13,3 +13,8 @@ allow hal_lineage_accessories_default usb_device:{file chr_file} rw_file_perms;
 # /sys/bus/usb/devices access
 allow hal_lineage_accessories_default sysfs:dir r_dir_perms;
 allow hal_lineage_accessories_default sysfs:file rw_file_perms;
+
+# Allow listening to the wireless charger uevents and reading its state
+allow hal_lineage_accessories_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow hal_lineage_accessories_default sysfs:lnk_file read;
+r_dir_file(hal_lineage_accessories_default, sysfs_battery_supply)
