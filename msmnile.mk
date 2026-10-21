@@ -85,7 +85,7 @@ endif
 # Accessories
 ifeq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
-    vendor.lineage.accessories-service.xiaomi
+    vendor.lineage.accessories-service.xiaomi-sm8150
 endif
 
 # Audio
